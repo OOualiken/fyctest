@@ -1,0 +1,178 @@
+<app-header></app-header>
+<br><br><br><br><br><br>
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+     <div class="col-md-4">
+        <ul class="nav nav-tabs tab-cards" id="submitListingTab" role="tablist">
+
+          <li class="nav-item">
+            <a class="nav-link active"
+               id="basic-info-tab"
+               data-toggle="tab"
+               href="#basic-info"
+               role="tab"
+               aria-controls="basic-info"
+               aria-selected="true">
+              <span>01</span> Basic Information
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link"
+               id="details-tab"
+               data-toggle="tab"
+               href="#details"
+               role="tab"
+               aria-controls="details"
+               aria-selected="false"><span>02</span> Details</a>
+          </li>
+
+
+        </ul>
+      </div>
+      <div class="col-md-8">
+        <form method="post">
+          <div class="tab-content m-0" id="submitListingTabContent">
+            <!-- Basic Information  -->
+            <div class="tab-pane fade show active" id="basic-info" role="tabpanel" aria-labelledby="basic-info-tab">
+              <div class="row">
+
+                <!-- Description  -->
+
+                <div class="col-md-12 form-group">
+                  <label> Description</label>
+                  <textarea name="content" rows="4" class="form-control"
+                            placeholder="Property Description"></textarea>
+                </div>
+
+                <!-- street  -->
+                <div class="col-md-6 form-group">
+                  <label>street</label>
+                  <input type="text" class="form-control"
+                         placeholder=" street" name="name" value="">
+                </div>
+
+                <!-- street_number  -->
+                <div class="col-md-6 form-group">
+                  <label> street number </label>
+                  <input type="text" class="form-control"
+                         placeholder="street number" name="name" value="">
+                </div>
+
+
+                <!-- city  -->
+                <div class="col-md-6 form-group">
+                  <label>Property Name</label>
+                  <input type="text" class="form-control" placeholder="city" name="name" value="">
+                </div>
+
+
+
+                <!-- zipcode  -->
+                <div class="col-md-6 form-group">
+                  <label> zipcode</label>
+                  <input type="text" class="form-control"
+                         placeholder="zipcode" name="name" value="">
+                </div>
+
+
+
+                <!-- price  -->
+                <div class="col-md-6 form-group">
+                  <label> Price </label>
+                  <input type="text" class="form-control"
+                         placeholder="Price" name="name" value="">
+                </div>
+
+
+
+                <!-- surface  -->
+                <div class="col-md-6 form-group">
+                  <label> surface</label>
+                  <input type="text" class="form-control"
+                         placeholder="surface" name="name" value="">
+                </div>
+
+                <!-- docHash  -->
+                <div class="col-md-6 form-group">
+                  <label>docHash </label>
+                  <input type="text" class="form-control"
+                         placeholder="docHash" name="name" value="">
+                </div>
+
+
+                <!-- owner adresse  -->
+                <div class="col-md-6 form-group">
+                  <label> owner</label>
+                  <input type="text" class="form-control"
+                         placeholder="owner adresse" name="name" value="">
+                </div>
+
+                <!-- dateOfCreation  -->
+                <div class="col-md-6 form-group">
+                  <label>dateOfCreation</label>
+                  <input type="text" class="form-control"
+                         placeholder="date Of Creation" name="name" value="">
+                </div>
+
+                <!-- roomNumber  -->
+                <div class="col-md-6 form-group">
+                  <label>room Number </label>
+                  <select class="form-control" name="status">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9"> 9</option>
+                  </select>
+                </div>
+
+                <!-- floor  -->
+                <div class="col-md-6 form-group">
+                  <label>dateOfCreation</label>
+                  <input type="text" class="form-control"
+                         placeholder="floor" name="name" value="">
+                </div>
+
+                <!-- is House  -->
+                <div class="col-md-6 form-group">
+                  <label>room Number </label>
+                  <select class="form-control" name="status">
+                    <option value="true">House</option>
+                    <option value="false">other</option>
+                  </select>
+                </div>
+
+
+              </div>
+            </div>
+            <div class="tab-pane fade" id="details" role="tabpanel" aria-labelledby="details-tab">
+
+              <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="termsAndConditions">
+                  <label class="custom-control-label" for="termsAndConditions">I Agree to the terms and Conditions </label>
+                </div>
+              </div>
+              <button type="submit" class="btn-custom" name="submit">Submit </button>
+            </div>
+
+          </div>
+
+        </form>
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+</div>
