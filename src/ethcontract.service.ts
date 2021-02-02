@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 const Web3 = require('web3');
 declare let require: any;
 declare let window: any;
-//const tokenAbi = require('../../../Solidity/build/contracts/PropertyTrade.json');
-//const PropertyFactory = require('../../../Solidity/build/contracts/PropertyFactory.json');
-//const OfferFactory = require('../../../Solidity/build/contracts/OfferFactory.json');
+// const tokenAbi = require('../../../Solidity/build/contracts/PropertyTrade.json');
+// const PropertyFactory = require('../../../Solidity/build/contracts/PropertyFactory.json');
+// const OfferFactory = require('../../../Solidity/build/contracts/OfferFactory.json');
 
 
 
@@ -12,12 +12,12 @@ declare let window: any;
   providedIn: 'root'
 })
 export class TransferService {
-  private uDonate : any;
+  private uDonate: any;
   private  web3: any;
   private enable: any;
   private test: any;
-  private _tokenContract: any;
-  private cle :String= "0x01515EC8DB3a7193879260d70e1B816Be3298F5a" ;
+//  private _tokenContract: any;
+ // private cle: String = '0x01515EC8DB3a7193879260d70e1B816Be3298F5a' ;
 
 
 
@@ -34,7 +34,7 @@ constructor() {
       'Please use a dapp browser like mist or MetaMask plugin for chrome'
     );
   }
- this._tokenContract = this.web3.eth.contract("");
+ // this._tokenContract = this.web3.eth.contract("");
 }
 
   private async enableMetaMaskAccount(): Promise<any> {
@@ -46,40 +46,22 @@ constructor() {
   }
   public async  gett(): Promise <string> {
     return  await  window.ethereum.enable().then((account) => {
-        return account[0]
+        return account[0];
       });
 
 }
   public async getUserBalance(): Promise<number> {
     const account =  await this.gett();
     return new Promise((resolve, reject) => {
-      let _web3 = this.web3;
-      this._tokenContract._eth.getBalance(account, function (err, result) {
-        console.log("testtttttttttttttt",this._tokenContract._eth)
-        if(err != null) {
+//      const _web3 = this.web3;
+      this._tokenContract._eth.getBalance(account, function(err, result) {
+        console.log('testtttttttttttttt', this._tokenContract._eth);
+        if (err != null) {
           reject(err);
         }
-        resolve(_web3.fromWei(result));
+       // resolve(.fromWei(result));
       });
     }) as Promise<number>;
-  }
-  async addAPropertyy(_description, _street, _streetNumber, _city,_zipcode,_isHouse) {
-    this.test = this.web3.eth.contract(tokenAbi.abi).at(this.cle);
-    console.log("putinnn de merde ",this._tokenContract);
-    let p = new Web3(window.web3.currentProvider);
-    const account =  await this.gett();
-   // this.uDonate = new p.eth.contract(tokenAbi.abi, this.cle);
-    //console.log("sa méére la puttteeeee",this.uDonate );
-    const create =  this.test.addAProperty(_description, _street, _streetNumber, _city,_zipcode,_isHouse).send({ from: account });
-    return create;
-  }
-  async setPropertyDetailss(id, _price, _surface, _docHash,_roomNumber,_floor) {
-    let p = new Web3(window.web3.currentProvider);
-
-    const account =  await this.gett();
-    this.uDonate = new p.eth.contract(tokenAbi.abi, this.cle);
-    const create = this.uDonate.methods.setPropertyDetails(id, _price, _docHash, _roomNumber,_floor).send({ from: account });
-    return create;
   }
 
 

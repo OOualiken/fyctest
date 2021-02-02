@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart, NavigationCancel, NavigationEnd } from '@angular/router';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { filter } from 'rxjs/operators';
-import {TransferService} from "../ethcontract.service";
+// import {TransferService} from "../ethcontract.service";
 const Web3 = require('web3');
 
 declare let require: any;
@@ -30,12 +30,8 @@ export class AppComponent implements OnInit {
 
   public balance: number;
 
-  constructor(cs: TransferService) {
-  //  cs.getUserBalance().then(balance => this.balance = balance);
-    //cs.addannconce().then(balance => this.balance = balance);
-   cs.addAPropertyy("test", "test", 22, "test", "test", true);}
-
-
+  constructor() {
+  }
   ngOnInit(){}
 
 
